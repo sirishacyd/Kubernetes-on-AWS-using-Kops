@@ -57,3 +57,8 @@ Run the following command to reflect the variables added to .bashrc:
 ```
 source ~/.bashrc
 ```
+8. Create SSH Key Pair
+Generate an SSH key pair that will be used for SSH access to the Kubernetes cluster:
+```
+ssh-keygen
+```
