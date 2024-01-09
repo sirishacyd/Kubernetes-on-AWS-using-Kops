@@ -38,4 +38,13 @@ Create an S3 bucket that Kubernetes will use to persist cluster state. Make sure
 
  ```
 aws s3 mb s3://your-unique-bucket-name --region your-region
-  ``` 
+ ```
+
+6. Create Private Hosted Zone in AWS Route53
+Head over to AWS Route53 and create a private hosted zone for your cluster. Choose a name (e.g., mykubernetescluster.local) and type as a private hosted zone for VPC. Select the default VPC in the region you are setting up your cluster, and then hit create.
+
+7. Configure Environment Variables
+Open the .bashrc file on your EC2 instance:
+ ```
+vi ~/.bashrc
+ ```
