@@ -74,3 +74,20 @@ kops create cluster \
 --dns private \
 --master-count 1
 ```
+10. Create Kubernetes Cluster
+```
+kops update cluster --yes --admin
+```
+
+The above command may take some time to create the required infrastructure resources on AWS. Execute the validate command to check its status and wait until the cluster becomes ready
+
+```
+kops validate cluster
+```
+
+11. Connect to the Master Node
+To connect to the master node, use the following command:
+
+```
+ssh admin@api.your-cluster-name.local
+```
