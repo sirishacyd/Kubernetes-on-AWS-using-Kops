@@ -62,3 +62,15 @@ Generate an SSH key pair that will be used for SSH access to the Kubernetes clus
 ```
 ssh-keygen
 ```
+9. Create a Kubernetes Cluster Definition
+```
+kops create cluster \
+--state=${KOPS_STATE_STORE} \
+--node-count=2 \
+--master-size=t3.medium \
+--node-size=t3.medium \
+--zones=your-availability-zone \
+--name=${KOPS_CLUSTER_NAME} \
+--dns private \
+--master-count 1
+```
