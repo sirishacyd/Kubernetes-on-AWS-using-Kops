@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-demo
+data:
+  db_host: "172.16.90.111"
+  db_password: "Admin@4321"

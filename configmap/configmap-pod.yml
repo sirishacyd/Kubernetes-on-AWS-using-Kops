@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-demo
+spec:
+  containers:
+    - name: demo
+      image: alpine
+      command: ["sleep", "3600"]
+      env:
+        # Define the environment variable
+        - name: DB_HOST # Notice that the case is different here
+          valueFrom:
+            configMapKeyRef:
+              name: config-demo
+              key: db_host 
+        - name: BD_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: config-demo
+              key: db_password
+    
