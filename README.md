@@ -97,3 +97,15 @@ If you want to destroy the Kubernetes cluster:
 ```
 kops delete cluster --yes
 ```
+13. Update Nodes and Master in the Cluster
+You can change the number of nodes and the number of masters using the following commands:
+
+kops edit ig nodes change minSize and maxSize to 0
+kops get ig - to get the master node name
+kops edit ig - change min and max size to 0
+kops update cluster --yes
+
+Optional: Create Terraform Scripts through Kops
+```
+  https://github.com/kubernetes/kops/blob/master/docs/terraform.md
+```
