@@ -53,3 +53,7 @@ following content into .bashrc, using your chosen cluster name and the S3 bucket
 export KOPS_CLUSTER_NAME=mykubernetescluster.local
 export KOPS_STATE_STORE=s3://your-unique-bucket-name
 ```
+Run the following command to reflect the variables added to .bashrc:
+```
+source ~/.bashrc
+```
