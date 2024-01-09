@@ -33,3 +33,9 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
  ```
+5. Create S3 Bucket in AWS
+Create an S3 bucket that Kubernetes will use to persist cluster state. Make sure the bucket name is unique across all AWS accounts.
+
+ ```
+aws s3 mb s3://your-unique-bucket-name --region your-region
+  ``` 
