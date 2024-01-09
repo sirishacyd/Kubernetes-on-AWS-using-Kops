@@ -48,3 +48,8 @@ Open the .bashrc file on your EC2 instance:
  ```
 vi ~/.bashrc
  ```
+following content into .bashrc, using your chosen cluster name and the S3 bucket name created in the previous step:
+```
+export KOPS_CLUSTER_NAME=mykubernetescluster.local
+export KOPS_STATE_STORE=s3://your-unique-bucket-name
+```
