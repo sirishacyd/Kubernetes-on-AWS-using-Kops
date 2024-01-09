@@ -91,3 +91,9 @@ To connect to the master node, use the following command:
 ```
 ssh admin@api.your-cluster-name.local
 ```
+12. Destroy the Kubernetes Cluster
+If you want to destroy the Kubernetes cluster:
+
+```
+kops delete cluster --yes
+```
